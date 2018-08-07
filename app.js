@@ -97,7 +97,7 @@ for(let row of data){
         }
     }
 }
-document.body.ap
+
 for(let s of sections){
     let section = document.createElement('section');
     let colorDiv = document.createElement('div');
