@@ -1,0 +1,125 @@
+:root{
+    --noble_gas : #c7b6da;
+    --halogen : #dca475 ;
+    --nonmetal : #bbd953;
+    --metalloid : #f4a364;
+    --transition_metal : #f9a6b0;
+    --alkali_metal : #f0bad1;
+    --alkaline_earth_metal : #94c3ef;
+    --metal : #9ddfde;
+    --post-transition_metal :#94efab;
+    --actinoid : #ef94e4;
+    --lanthanoid : #efe194;
+}
+body{
+    margin: 0;
+    background:#eee;
+    overflow: hidden;
+    font-weight: bold;
+    font-family: Roboto;
+    position: relative;
+}
+.table{
+    padding:5vh;
+    display:grid;
+    max-width:100vw;
+    height:80vh;
+    grid-template-columns: 1fr;
+    grid-gap:3vh 0;
+}
+.table .row {
+    display:grid;
+    grid-gap:.6vw;
+    grid-template-columns: repeat(18,4.5vw);
+    grid-auto-rows: 6vh;
+}
+
+.table .row element{
+    border-radius: .15vw;
+    display:flex;
+    flex-flow: wrap;
+    justify-content: center;
+    align-content: center;
+    padding:3.8vh 1vw;
+}
+.symbol , .atom_Number {
+    width:100%;
+    text-align: center;
+}
+/* Elements */
+.hydrogen {
+    grid-column: 1/2;
+    background: #f6f94a !important;
+}
+.helium{
+    grid-column: 18/19;
+}
+.boron,.aluminum{
+    grid-column: 13/14;
+}
+.cerium,.thorium{
+    grid-column: 3/4;
+}
+.lanthanum:first-child , .actinium:first-child{
+    display: none !important;
+}
+/* Groups */
+
+.noble_gas{
+    background: var(--noble_gas) !important; 
+}
+.halogen{
+    background: var(--halogen) !important;
+}
+.nonmetal:not(.hydrogen) {
+    background : var(--nonmetal)  !important;
+}
+.metalloid{
+    background : var(--metalloid) !important;
+}
+.transition_metal{
+    background : var(--transition_metal) !important;
+}
+.alkali_metal{
+    background : var(--alkali_metal) !important;
+}
+.alkaline_earth_metal{
+    background: var(--alkaline_earth_metal) !important;
+}
+.metal{
+    background : var(--metal)  !important; 
+}
+.post-transition_metal{
+    background : var(--post-transition_metal)  !important; 
+}
+.actinoid{
+    background : var(--actinoid)  !important; 
+}
+.lanthanoid{
+    background : var(--lanthanoid)  !important;
+}
+
+/* Classifications */
+
+.classifications {
+    position: absolute;
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap:1vh 1vw;
+    top:5vh;
+    left:20vw;
+    padding:4vh 3vw;
+    border:.1vw solid var(--halogen);
+}
+.classifications > h1{
+    grid-column: 1/5;
+    text-align : center;
+}
+.classifications > section{
+    display:flex;
+}
+.classifications > section > div {
+    width:1vw;
+    height:1vw;
+    margin-right:1vw;
+}
